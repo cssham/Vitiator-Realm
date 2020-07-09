@@ -8,9 +8,33 @@ import categoryEdit from './components/admin/category/Edit.vue';
 import itemList from './components/admin/item/List.vue';
 import itemNew from './components/admin/item/New.vue';
 import itemEdit from './components/admin/item/Edit.vue';
+//
+//sliders component
+import sliderList from './components/admin/slider/List.vue';
+import sliderNew from './components/admin/slider/New.vue';
+import sliderEdit from './components/admin/slider/Edit.vue';
+//reservation component
+import reservationList from './components/admin/reservation/List.vue';
+//contact component
+import contactList from './components/admin/contact/List.vue';
+
+
 import VueRouter from 'vue-router';
 
+
 export const routes =[
+    //reservation routs
+    {
+        path: '/reservation-list',
+            component: reservationList
+    },
+    //contact routes
+
+     {
+         path: '/contact-list',
+         component: contactList
+     },
+
     //home routes
     {
         path:'/home',
@@ -41,5 +65,16 @@ export const routes =[
     {
         path: '/item-edit/:id',
         component: itemEdit
+    },
+    //slider routes
+    {
+        path: '/slider-list',
+        component: sliderList
+    }, {
+        path: '/slider-new',
+        component: sliderNew
+    }, {
+        path: '/slider-edit/:id',
+        component: sliderEdit
     }
 ]

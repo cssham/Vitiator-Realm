@@ -150,6 +150,24 @@
                                 Items
                             </a>
                         </li>
+                         <li class="nav-item">
+                            <router-link to="/slider-list" class="nav-link">
+                                <i class="nav-icon fa fa-pie-chart"></i>
+                                Sliders
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="/reservation-list" class="nav-link">
+                                <i class="nav-icon fa fa-pie-chart"></i>
+                                Reservation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="/contact-list" class="nav-link">
+                                <i class="nav-icon fa fa-pie-chart"></i>
+                                Messages
+                            </a>
+                        </li>
 
                        {{--  <li class="nav-item">
                             <a href="../calendar.html" class="nav-link">

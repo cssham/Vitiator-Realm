@@ -75,7 +75,7 @@ class ItemController extends Controller
         $sub = substr($request->image,0,$strpos); //string before semicolon
         $extension = explode('/',$sub)[1];
         $imageName = $request->name.time().".".$extension;
-        $image =Image::make($request->image)->resize(300,300);
+        $image =Image::make($request->image)->resize(370,320);
         $uploadPath = public_path()."/storage/items/";
         $image->save($uploadPath.$imageName);
 
@@ -139,7 +139,7 @@ class ItemController extends Controller
             $sub = substr($request->image, 0, $strpos); //string before semicolon
             $extension = explode('/', $sub)[1];
             $imageName = $request->name . time() . "." . $extension;
-            $image = Image::make($request->image)->resize(300, 300);
+            $image = Image::make($request->image)->resize(370, 320);
             $uploadPath = public_path() . "/storage/items/";
             $oldImage = $uploadPath . $item->image;
             if (file_exists($oldImage)) {
