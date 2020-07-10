@@ -35,8 +35,8 @@
                   <td> <img :src="imagePath(slider.image)" :alt="slider.title" height="50px" width="50px"> </td>
                   <td>{{ slider.created_at | timeFormat}}</td>
                   <td>
-                      <router-link :to="`/slider-edit/${slider.id}`">Edit</router-link> |
-                      <a href="" @click.prevent="deleteSlider(slider.id)">Delete</a>
+                      <router-link :to="`/slider-edit/${slider.id}`" class="btn btn-info btn-sm">Edit</router-link>
+                      <a href="" @click.prevent="deleteSlider(slider.id)" class="btn btn-danger btn-sm">Delete</a>
                   </td>
                 </tr>
                 </tbody>

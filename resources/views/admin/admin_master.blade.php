@@ -10,7 +10,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <!-- Ionicons -->
-    {{-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> --}}
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Google Font: Source Sans Pro -->
     {{-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> --}}
     <!-- Styles layouts app.blade.php-->
@@ -152,19 +152,19 @@
                         </li>
                          <li class="nav-item">
                             <router-link to="/slider-list" class="nav-link">
-                                <i class="nav-icon fa fa-pie-chart"></i>
+                                <i class="nav-icon fa fa-book"></i>
                                 Sliders
                             </a>
                         </li>
                         <li class="nav-item">
                             <router-link to="/reservation-list" class="nav-link">
-                                <i class="nav-icon fa fa-pie-chart"></i>
+                                 <i class="nav-icon fa fa-edit"></i>
                                 Reservation
                             </a>
                         </li>
                         <li class="nav-item">
                             <router-link to="/contact-list" class="nav-link">
-                                <i class="nav-icon fa fa-pie-chart"></i>
+                                <i class="nav-icon fa fa-envelope-o"></i>
                                 Messages
                             </a>
                         </li>

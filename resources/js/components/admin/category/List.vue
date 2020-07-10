@@ -35,8 +35,8 @@
                   <td>{{ category.slug }}</td>
                   <td>{{ category.created_at | timeFormat}}</td>
                   <td>
-                      <router-link :to="`/category-edit/${category.id}`">Edit</router-link> |
-                      <a href="" @click.prevent="deleteCategory(category.id)">Delete</a>
+                      <router-link :to="`/category-edit/${category.id}`" class="btn btn-info btn-sm">Edit</router-link>
+                      <a href="" @click.prevent="deleteCategory(category.id)" class="btn btn-danger btn-sm">Delete</a>
                   </td>
                 </tr>
                 </tbody>

@@ -42,8 +42,8 @@
                   <td> {{ item.price }}</td>
                   <td> {{ item.offered_price }} </td>
                   <td>
-                      <router-link :to="`/item-edit/${item.id}`">Edit</router-link> |
-                     <a href="" @click.prevent="deleteItem(item.id)">Delete</a>
+                      <router-link :to="`/item-edit/${item.id}`" class="btn btn-info btn-sm">Edit</router-link>
+                     <a href="" @click.prevent="deleteItem(item.id)" class="btn btn-danger btn-sm">Delete</a>
                   </td>
                 </tr>
                 </tbody>

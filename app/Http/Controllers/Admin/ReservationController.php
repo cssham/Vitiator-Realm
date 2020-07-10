@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Notifications\ReservationConfirmation;
 use App\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 class ReservationController extends Controller
 {
@@ -18,6 +20,9 @@ class ReservationController extends Controller
         $reservation = Reservation::find($id);
         $reservation->status =true;
         $reservation->save();
+
+        Notification::route('mail',$reservation->email)
+        ->notify(new ReservationConfirmation());
     }
     public function delete($id)
     {

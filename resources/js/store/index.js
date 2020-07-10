@@ -9,7 +9,12 @@ const store = new Vuex.Store({
     item:[],
     slider:[],
     reservation:[],
-    contact:[]
+    contact:[],
+    items:[],
+    categories:[],
+    orders:[],
+    message:[],
+    request:[]
   },
   getters:{
             getCategory(state){
@@ -27,6 +32,25 @@ const store = new Vuex.Store({
              getContact(state) {
                  return state.contact;
              },
+             getDashboardItems(state) {
+                 return state.items;
+             },
+             getDashboardOrders(state) {
+                 return state.orders;
+             },
+             getDashboardCategories(state) {
+
+                 return state.categories;
+
+             },
+             getDashboardMessage(state) {
+
+                 return state.message;
+             },
+             getDashboardRequest(state) {
+
+                 return state.request;
+             }
   },
   actions:{
             categoryList(context){
@@ -59,11 +83,22 @@ const store = new Vuex.Store({
             },
             contactList(context) {
                 axios.get('/admin/contact/list').then((response) => {
-                    context.commit('contacts', response.data.contacts)
+                      context.commit('contacts', response.data.contacts)
                 }).catch((err) => {
 
                 });
-            }
+            },
+            dashboardList(context) {
+                axios.get('/admin/dashboard/list').then((response) => {
+                    context.commit('totalOrders', response.data.totalOrders)
+                    context.commit('totalCategories', response.data.totalCategories)
+                    context.commit('totalItems', response.data.totalItems)
+                    context.commit('totalMessage', response.data.totalMessage)
+                    context.commit('requests', response.data.requests)
+                }).catch((err) => {
+
+                });
+            },
   },
   mutations: {
     categories (state,data) {
@@ -80,7 +115,22 @@ const store = new Vuex.Store({
     },
     contacts(state,data){
         return state.contact =data;
-    }
+    },
+    totalOrders(state,data){
+        return state.orders = data;
+    },
+    totalCategories(state, data) {
+        return state.categories = data;
+    },
+    totalItems(state, data) {
+        return state.items = data;
+    },
+    totalMessage(state, data) {
+        return state.message = data;
+    },
+    requests(state, data) {
+        return state.request = data;
+    },
   }
 })
 

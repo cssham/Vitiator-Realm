@@ -33,4 +33,6 @@ Route::group(['prefix' => 'admin','as'=>'admin.','namespace'=>'Admin','middlewar
     Route::delete('/reservation/delete/{id}', 'ReservationController@delete')->name('reservation.delete');
     Route::get('/contact/list', 'ContactController@index')->name('contact.list');
     Route::delete('/contact/delete/{id}', 'ContactController@delete')->name('contact.delete');
+
+    Route::get('/dashboard/list', 'DashboardController@index')->name('dashboard.list');
 });
